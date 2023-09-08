@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  dmdfederationhost:
+    container_name: dmdfederationhost
+    image: dmdfederationhost/1.0
+    build: ./dmdFederationHost
+    ports:
+      - "4200:4200"
+  dmdfederationremote:
+    container_name: dmdfederationremote
+    image: dmdfederationremote/1.0
+    build: ./dmdFederationRemote
+    ports:
+      - "4202:4202"      
+volumes:
+  pgdata: {}
